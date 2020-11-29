@@ -1,1 +1,10 @@
+# Directories
 /.idea/*
+
+# File Types
+*.pdf
+*.py
+
+# Files
+data/pv_day.csv
+scripts/day.ipynb
