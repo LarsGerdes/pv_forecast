@@ -7,6 +7,6 @@ The data is collected from a Fronius Primo 5.0-1 inverter.
 
 ## scripts
 - pv_org.sql creates a database and uploads the original data.
-- pv.ipynb shows an initial analysis and an explanation. 
+- pv.ipynb shows an initial analysis and an explanation for the columns. 
 - pv.sql creates a view without text columns and missing data.
 - analysis.ipynb shows further analysis.
