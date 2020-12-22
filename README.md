@@ -10,3 +10,4 @@ The data is collected from a Fronius Primo 5.0-1 inverter.
 - pv.ipynb shows an initial analysis and an explanation for the columns. 
 - pv.sql creates a view without text columns and missing data.
 - analysis.ipynb shows further analysis.
+- sun_rise_set.ipynb download sunrise and sunset data.
