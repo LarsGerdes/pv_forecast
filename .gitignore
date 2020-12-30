@@ -9,3 +9,5 @@
 # Files
 data/pv_day.csv
 scripts/day.ipynb
+scripts/tsa.ipynb
+
