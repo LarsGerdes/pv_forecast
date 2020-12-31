@@ -2,7 +2,6 @@
 Here, a forecast for the energy production of a photovoltaic system is created.
 
 ## data
-The data is .
 - pv.csv contains the original data collected from a Fronius Primo 5.0-1 
   inverter.
 - owm_2020_12_29.json weather data from openweathermap.org
