@@ -6,8 +6,12 @@
 *.pdf
 *.py
 
-# Files
+# Data
 data/pv_day.csv
+data/produkt_ein_min_rr_20190301_20190331_00020.txt
+data/DURSUN.2D.201908.grb.bz2
+
+# Scripts
 scripts/jupyter/day.ipynb
 scripts/jupyter/dwd.ipynb
 scripts/jupyter/tsa.ipynb

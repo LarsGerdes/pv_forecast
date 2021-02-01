@@ -13,7 +13,7 @@ Here, a forecast for the energy production of a photovoltaic system is created.
 - ws.sql creates a time series with 30 minutes frequency based on the energy 
   ('energy_positiv_ws').
 - results.sql creates a table for saving forecasts. The table is initialized 
-  with a seasonal naive model, which creates a prediction based on the day 
+  with a seasonal naive model which creates a prediction based on the day 
   before.  
 
 ### jupyter  
