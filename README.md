@@ -4,7 +4,6 @@ Here, a forecast for the energy production of a photovoltaic system is created.
 ## data
 - pv.csv contains the original data collected from a Fronius Primo 5.0-1 
   inverter.
-- owm_2020_12_29.json weather data from openweathermap.org
 
 ## scripts
 ### sql
@@ -20,5 +19,5 @@ Here, a forecast for the energy production of a photovoltaic system is created.
 - pv.ipynb shows an initial analysis and an explanation for the columns.
 - analysis.ipynb shows further analysis.
 - sun_rise_set.ipynb download sunrise and sunset data from sunrise-sunset.org.
-- owm.ipynb download weather data from owm.
+- owm_api_exploration.ipynb explores owm api.
 - results.ipynb creates error measures and plots to compare predictions.

@@ -1,6 +1,7 @@
 # Directories
 /.idea/*
 /scripts/__pycache__/*
+/scripts/jupyter/__pycache__/*
 
 # File Types
 *.pdf
@@ -15,3 +16,7 @@ data/DURSUN.2D.201908.grb.bz2
 scripts/jupyter/day.ipynb
 scripts/jupyter/dwd.ipynb
 scripts/jupyter/tsa.ipynb
+scripts/jupyter/results.ipynb
+scripts/jupyter/reference_models.ipynb
+scripts/jupyter/fronius_solar_api_exploration.ipynb
+scripts/sql/results.sql
