@@ -19,5 +19,6 @@ Here, a forecast for the energy production of a photovoltaic system is created.
 - pv.ipynb shows an initial analysis and an explanation for the columns.
 - analysis.ipynb shows further analysis.
 - sun_rise_set.ipynb download sunrise and sunset data from sunrise-sunset.org.
-- owm_api_exploration.ipynb explores owm api.
+- owm_api_exploration.ipynb exploration of OWM API.
 - results.ipynb creates error measures and plots to compare predictions.
+- fronius_solar_api_exploration.ipynb exploration of Fronius Solar API.

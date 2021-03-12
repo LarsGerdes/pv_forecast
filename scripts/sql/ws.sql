@@ -14,8 +14,8 @@ from (
     ) as temp
     ) as temp
 right join(
-    select generate_series(min(datetime::date), max(datetime::date),
+    select generate_series(min(datetime::date),
+        max(datetime::date) + (interval '1 d') - (interval '30 min'),
         interval '30 min') as datetime
     from pv
-    ) as ts on (floor = datetime)
-order by datetime asc;
+) as ts on (floor = datetime);
