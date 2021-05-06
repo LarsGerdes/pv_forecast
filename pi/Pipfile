@@ -4,16 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-jupyter = "*"
-numpy = "*"
-pandas = "*"
-sqlalchemy = "*"
-setuptools = "*"
-matplotlib = "*"
-psycopg2 = "*"
-requests = "*"
-scikit-learn = "*"
 toml = "*"
+requests = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

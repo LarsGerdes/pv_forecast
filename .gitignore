@@ -1,19 +1,21 @@
+# File Types
+*.lock
+*.pdf
+*.toml
+
 # Directories
 /.idea/*
+/__pycache__/*
+/pi/.idea/*
 /scripts/__pycache__/*
 /scripts/jupyter/__pycache__/*
-
-# File Types
-*.pdf
-*.py
+/scripts/py/*
 
 # Scripts
-Pipfile.lock
-scripts/jupyter/day.ipynb
+scripts/jupyter/clustering.ipynb
 scripts/jupyter/dwd.ipynb
-scripts/jupyter/tsa.ipynb
-scripts/jupyter/results.ipynb
+scripts/jupyter/new.ipynb
 scripts/jupyter/reference_models.ipynb
-scripts/sql/results.sql
-scripts/sql/ws.sql
+scripts/jupyter/tsa.ipynb
+scripts/sql/create_tables.sql
 
