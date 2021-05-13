@@ -26,6 +26,7 @@ Hardware which was used is a Fronius Primo 5.0-1 inverter, and the Raspberry Pi
 - 30min_further.ipynb: Further analysis of USB data.
 - daily.ipynb: First look on daily data from Fronius Solarweb.
 - fronius_solar_api.ipynb: Exploration of Fronius Solar API.
+- minute.ipynb: Exploration of data from API which is saved every minute.
 - owm_api.ipynb: Exploration of OWM API.
 - results.ipynb: Creates error measures and plots to compare predictions.
 - sun_rise_set.ipynb: Exploration of sunrise-sunset.org API.
