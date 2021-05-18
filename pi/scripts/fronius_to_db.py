@@ -37,11 +37,14 @@ conn = connect(dbname=conf['name'],
 cur = conn.cursor()
 
 # Execute SQL statement.
-cur.execute(
-    'insert into energy_minute values (%s, %s)',
-    (t, dic['Body']['Data']['TOTAL_ENERGY']['Value'])
-)
-conn.commit()
+try:
+    cur.execute(
+        'insert into energy_minute values (%s, %s)',
+        (t, dic['Body']['Data']['TOTAL_ENERGY']['Value'])
+    )
+    conn.commit()
+except KeyError:
+    print(dic)
 
 # Close database connection.
 cur.close()
