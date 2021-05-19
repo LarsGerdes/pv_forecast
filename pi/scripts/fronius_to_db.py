@@ -1,11 +1,11 @@
-# Gets data from Fronius API and saves it in a PostgreSQL database on a
+# Gets data from Fronius API and save it in PostgreSQL database on a
 # RaspberryPi.
 
 # Libraries
-from toml import load           # loading config file
-from requests import get        # API connection
-from datetime import datetime   # timestamp operations
-from psycopg2 import connect    # database connection
+from toml import load                       # loading config file
+from requests import get                    # API connection
+from datetime import datetime, timezone     # timestamp operations
+from psycopg2 import connect                # database connection
 
 # Load data about IP and database access.
 conf = load('conf.toml')
@@ -21,11 +21,10 @@ url = url.format(conf['fronius']['ip'])
 dic = get(url)
 dic = dic.json()
 
-# Convert local timezone aware string into UTC Unix Timestamp.
+# Convert string to UTC datetime.
 t = dic['Head']['Timestamp']
 t = datetime.fromisoformat(t)
-t = t.timestamp()
-t = int(t)
+t = t.astimezone(timezone.utc)
 
 # Connect to database.
 conf = conf['database']
@@ -36,8 +35,8 @@ conn = connect(dbname=conf['name'],
                port=conf['port'])
 cur = conn.cursor()
 
-# Execute SQL statement.
 try:
+    # Execute SQL statement.
     cur.execute(
         'insert into energy_minute values (%s, %s)',
         (t, dic['Body']['Data']['TOTAL_ENERGY']['Value'])

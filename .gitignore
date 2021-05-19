@@ -16,5 +16,4 @@ scripts/jupyter/clustering.ipynb
 scripts/jupyter/dwd.ipynb
 scripts/jupyter/reference_models.ipynb
 scripts/jupyter/tsa.ipynb
-scripts/sql/create_tables.sql
 
