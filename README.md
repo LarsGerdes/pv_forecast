@@ -16,6 +16,8 @@ Hardware which was used is a Fronius Primo 5.0-1 inverter, and the Raspberry Pi
 ## pi
 - fronius_to_db.py: Gets data from inverter and saves it in a PostgreSQL 
   database on the Raspberry Pi.
+- owm_to_db.py: Requests weather forecasts from OWM API and saves it in 
+  PostgreSQL database Raspberry Pi.
 - sun_to_cron: Creates a crontab to run the fronius_to_db.py only while the sun 
   is shining.
 
