@@ -15,6 +15,7 @@ requests = "*"
 scikit-learn = "*"
 toml = "*"
 seaborn = "*"
+python-crontab = "*"
 
 [dev-packages]
 

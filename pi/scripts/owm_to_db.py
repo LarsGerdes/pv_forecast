@@ -6,6 +6,7 @@ from toml import load
 from toml import dump
 from requests import get
 from datetime import datetime
+from crontab import CronTab
 
 path = 'conf.toml'
 conf = load(path)
@@ -71,12 +72,13 @@ else:
     with open(path, 'w') as file:
         dump(conf, file)
 
-# Get sunrise and sunset data from API and save it in cronjob which executes
-# fronius_to_db script.
+# Get sunrise and sunset data from API
 keys = ['sunrise', 'sunset']
 sun = [datetime.fromtimestamp(owm['current'][sun]).hour for sun in keys]
 
-cron = '* {}-{} * * * pi cd /home/pi/pv && /home/pi/.local/bin/pipenv ' \
-       'run python scripts/fronius_to_db.py\n'.format(*sun)
-with open('/etc/cron.d/pv', 'w') as file:
-    file.write(cron)
+# Update cronjob with sunrise / -set data
+cron = CronTab(user='pi')
+for job in cron:
+    if job.comment == 'save energy':
+        job.hour.during(*sun)
+        cron.write()
